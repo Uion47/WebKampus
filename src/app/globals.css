@@ -10,7 +10,7 @@
 }
 
 body {
-  font-family: Poppins, sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: var(--bg);
   color: #fff;
 }
@@ -97,8 +97,10 @@ body {
     top: 100%;
     right: -100%;
     background-color: #fff;
-    width: 30rem;
+    width: 25rem;
     height: 100vh;
+    transition: right 0.35s ease;
+    box-shadow: -8px 0 24px rgba(2, 6, 23, 0.4);
   }
   .navbar .navbar-nav.active {
     right: 0;
@@ -108,7 +110,13 @@ body {
     display: block;
     padding: 1rem 2rem;
     color: #000;
-    border-bottom: 1px solid #ddd;
+  }
+
+  .navbar .navbar-nav a:hover:after {
+    background-color: var(--primary);
+    transform-origin: 0 0;
+    transform: scale(0.2);
+    color: #fff;
   }
 }
 
