@@ -10,7 +10,7 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: Poppins, sans-serif;
   background-color: var(--bg);
   color: #fff;
 }
@@ -102,6 +102,13 @@ body {
   }
   .navbar .navbar-nav.active {
     right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    display: block;
+    padding: 1rem 2rem;
+    color: #000;
+    border-bottom: 1px solid #ddd;
   }
 }
 
