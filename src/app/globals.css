@@ -29,6 +29,11 @@ body {
   z-index: 9999;
 }
 
+.navbar-logo-cokro {
+  display: flex;
+  align-items: center;
+}
+
 .navbar .navbar-logo {
   color: #fff;
   font-size: 2rem;
@@ -88,7 +93,7 @@ body {
 
 /* Dekstop to Tablet */
 
-@media (max-width: 1210px) {
+@media (max-width: 1300px) {
   .navbar .navbar-extra a#hamburger-menu {
     display: inline-block;
   }
@@ -104,6 +109,10 @@ body {
   }
   .navbar .navbar-nav.active {
     right: 0;
+  }
+
+  .navbar .navbar-logo-cokro {
+    display: none;
   }
 
   .navbar .navbar-nav a {
@@ -122,4 +131,12 @@ body {
 
 #hamburger-menu {
   display: none;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url("/public/Hero-Uncok-Pinrang.jpeg");
 }

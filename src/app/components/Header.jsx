@@ -20,11 +20,11 @@ function Header() {
     <header>
       <nav className="navbar">
         {/* Logo */}
-        {/* <div>
+        <div className="navbar-logo-cokro">
           <Link href="/">
             <Image src="/logo.png" alt="Logo" width={60} height={60} />
           </Link>
-        </div> */}
+        </div>
         <a href="#" className="navbar-logo">
           Cokro Aminoto <span>Pinrang</span>
         </a>
