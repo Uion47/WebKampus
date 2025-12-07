@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
+import Hero from "./components/Hero";
 
 const poppins = Poppins({
   weight: ["100", "300", "400", "700"],
@@ -23,6 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={poppins.variable}>
         <Header />
+        <Hero />
         {children}
       </body>
     </html>
