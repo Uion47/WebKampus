@@ -2,7 +2,7 @@
 
 export default function Hero() {
   return (
-    <section className="hero">
+    <section id="home" className="hero">
       <main className="content">
         <h1>
           Mari Berkembang Bersama<span> Cokro</span>

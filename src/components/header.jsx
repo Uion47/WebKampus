@@ -47,10 +47,18 @@ function Header() {
 
         {/* Menu */}
         <div className={`navbar-nav ${isMenuOpen ? "active" : ""}`}>
-          <a href="#home">Beranda</a>
-          <a href="#about">Tentang Kami</a>
-          <a href="#menu">Menu</a>
-          <a href="#contact">Kontak</a>
+          <a href="#home" onClick={() => setIsMenuOpen(false)}>
+            Beranda
+          </a>
+          <a href="#about" onClick={() => setIsMenuOpen(false)}>
+            Tentang Kami
+          </a>
+          <a href="#menu" onClick={() => setIsMenuOpen(false)}>
+            Menu
+          </a>
+          <a href="#contact" onClick={() => setIsMenuOpen(false)}>
+            Kontak
+          </a>
         </div>
 
         {/* Extra */}
