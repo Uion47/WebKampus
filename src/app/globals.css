@@ -27,7 +27,7 @@ body {
   padding: 0.2rem 5%;
   height: var(--header-offset);
   background-color: rgba(0, 2, 0, 0.878);
-  border-bottom: 2px solid #0a110b;
+  border-bottom: 2px solid #043d0c;
   position: fixed;
   top: 0;
   left: 0;
@@ -42,7 +42,7 @@ body {
 
 .navbar .navbar-logo {
   color: #fff;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 600;
   text-decoration: none;
   font-style: italic;
@@ -55,8 +55,8 @@ body {
 .navbar .navbar-nav a {
   color: #fff;
   display: inline-block;
-  font-size: 1.2rem;
-  margin: 0 2rem;
+  font-size: 0.96rem;
+  margin: 0 1.6rem;
 
   text-decoration: none !important;
 }
@@ -80,8 +80,8 @@ body {
 
 .navbar .navbar-extra a {
   color: #fff;
-  margin-left: 2rem;
-  font-size: 1.3rem;
+  margin-left: 1.6rem;
+  font-size: 1.04rem;
   text-decoration: none;
 }
 
@@ -101,6 +101,7 @@ body {
 }
 /* Hero section styles */
 .hero {
+  position: relative;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -122,10 +123,15 @@ body {
     rgba(1, 1, 3, 1) 1%,
     rgba(255, 255, 255, 0) 10%
   );
+  z-index: 1;
+  pointer-events: none;
 }
 
 .hero .content {
+  position: relative;
+  z-index: 2;
   padding: 1.3rem 6%;
+  margin-top: 4rem;
   max-width: 40rem;
 }
 
@@ -156,22 +162,60 @@ body {
   text-decoration: none !important;
   border-radius: 0.5rem;
   box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  transition: all 0.3s ease;
+}
+
+.hero .content .cta:hover {
+  background-color: #219034;
+  box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+  transform: translateY(-3px);
 }
 
 .about {
-  padding: 9rem 6% 1.4rem;
-  text-align: center;
+  padding: 4rem 5% 1.2rem;
 }
 
 .about h2 {
   text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: 2.1rem;
+  margin-bottom: 1.5rem;
 }
 
 .about h2 span {
   color: var(--primary);
 }
+
+.about .row {
+  display: flex;
+}
+
+.about .row .about-image {
+  flex: 1 1 20rem;
+  padding-right: 2rem;
+}
+
+.about .row .about-image img {
+  height: 24rem;
+  width: 35rem;
+  object-fit: cover;
+}
+
+.about .row .content {
+  flex: 1 1 35rem;
+}
+
+.about .row .content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.about .row .content p {
+  font-size: 0.7rem;
+  color: #d7d7d7;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
 /* Semua Model */
 
 @media (max-width: 600px) {
@@ -182,7 +226,7 @@ body {
 
 /* Dekstop to Tablet */
 
-@media (max-width: 1300px) {
+@media (max-width: 1100px) {
   .navbar .navbar-extra a#hamburger-menu {
     display: inline-block;
   }
@@ -206,7 +250,7 @@ body {
 
   .navbar .navbar-nav a {
     display: block;
-    padding: 1rem 2rem;
+    padding: 0.8rem 1.6rem;
     color: #000;
   }
 
@@ -216,4 +260,331 @@ body {
     transform: scale(0.2);
     color: #fff;
   }
+}
+
+.about-desc {
+  font-size: 0.88rem;
+  color: #d7d7d7;
+  line-height: 1.6;
+  margin-bottom: 2.4rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.6rem;
+  margin-top: 2.4rem;
+}
+
+.feature {
+  background-color: rgba(40, 167, 69, 0.1);
+  border: 2px solid var(--primary);
+  border-radius: 12px;
+  padding: 1.6rem;
+  transition: all 0.3s ease;
+}
+
+.feature:hover {
+  background-color: rgba(40, 167, 69, 0.2);
+  transform: translateY(-5px);
+}
+
+.feature h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.64rem;
+  color: #fff;
+}
+
+.feature p {
+  color: #d7d7d7;
+  line-height: 1.5;
+}
+
+/* Menu Section Styles */
+.menu {
+  padding: 4.8rem 5% 2.4rem;
+  background-color: var(--bg);
+}
+
+.menu-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.menu h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 0.8rem;
+  color: #fff;
+}
+
+.menu h2 span {
+  color: var(--primary);
+}
+
+.menu-desc {
+  text-align: center;
+  font-size: 0.88rem;
+  color: #d7d7d7;
+  margin-bottom: 2.4rem;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.6rem;
+}
+
+.menu-card {
+  background-color: rgba(40, 167, 69, 0.05);
+  border: 2px solid rgba(40, 167, 69, 0.3);
+  border-radius: 12px;
+  padding: 1.6rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.menu-card:hover {
+  background-color: rgba(40, 167, 69, 0.15);
+  border-color: var(--primary);
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(40, 167, 69, 0.2);
+}
+
+.menu-icon {
+  font-size: 2.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.menu-card h3 {
+  font-size: 1.04rem;
+  color: #fff;
+  margin-bottom: 0.64rem;
+}
+
+.menu-card p {
+  color: #d7d7d7;
+  margin-bottom: 0.8rem;
+  line-height: 1.5;
+}
+
+.menu-price {
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* Contact Section Styles */
+.contact {
+  padding: 4.8rem 5% 2.4rem;
+  background-color: var(--bg);
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 0.8rem;
+  color: #fff;
+}
+
+.contact h2 span {
+  color: var(--primary);
+}
+
+.contact-desc {
+  text-align: center;
+  font-size: 0.88rem;
+  color: #d7d7d7;
+  margin-bottom: 2.4rem;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.4rem;
+}
+
+.contact-info h3,
+.contact-form h3 {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 1.6rem;
+}
+
+.info-item {
+  display: flex;
+  gap: 1.2rem;
+  margin-bottom: 1.6rem;
+  text-align: left;
+}
+
+.info-icon {
+  font-size: 1.6rem;
+  min-width: 2.4rem;
+  display: flex;
+  align-items: center;
+}
+
+.info-title {
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.24rem;
+}
+
+.contact-info p {
+  color: #d7d7d7;
+  line-height: 1.6;
+  font-size: 0.88rem;
+}
+
+/* Contact Form Styles */
+.contact-form {
+  background-color: rgba(40, 167, 69, 0.05);
+  border: 2px solid rgba(40, 167, 69, 0.3);
+  border-radius: 12px;
+  padding: 1.6rem;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.64rem 0.8rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(40, 167, 69, 0.3);
+  border-radius: 8px;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.88rem;
+  transition: all 0.3s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  background-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 12px rgba(40, 167, 69, 0.2);
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Poppins", sans-serif;
+}
+
+.submit-btn:hover {
+  background-color: #219034;
+  box-shadow: 0 8px 24px rgba(40, 167, 69, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about h2,
+  .menu h2,
+  .contact h2 {
+    font-size: 1.6rem;
+  }
+
+  .contact-content {
+    grid-template-columns: 1fr;
+  }
+
+  .about-features {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Modal Styles (used by Hero CTA) - Light Theme */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.28);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+}
+
+.modal {
+  background: #ffffff;
+  border: 2px solid rgba(0, 0, 0, 0.18);
+  color: #072018;
+  padding: 1.6rem;
+  border-radius: 12px;
+  max-width: 420px;
+  width: 90%;
+  position: relative;
+  text-align: left;
+}
+
+.modal h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.15rem;
+  text-shadow: none;
+  color: #072018;
+}
+
+.modal p {
+  color: #000000;
+  text-shadow: none;
+}
+
+.modal-close {
+  position: absolute;
+  right: 0.6rem;
+  top: 0.4rem;
+  color: #333;
+  border: none;
+  background-color: transparent;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 0.6rem;
+  justify-content: flex-end;
+}
+
+.modal .cta {
+  padding: 0.6rem 1rem;
+  font-size: 0.95rem;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 6px;
+}
+
+.modal .cta:hover {
+  background: #000000;
 }

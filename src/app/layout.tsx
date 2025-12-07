@@ -4,6 +4,8 @@ import "./globals.css";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
+import Menu from "./components/Menu";
+import Contact from "./components/Contact";
 
 const poppins = Poppins({
   weight: ["100", "300", "400", "700"],

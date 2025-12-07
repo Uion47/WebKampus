@@ -22,7 +22,7 @@ function Header() {
         {/* Logo */}
         <div className="navbar-logo-cokro">
           <Link href="/">
-            <Image src="/logo.png" alt="Logo" width={60} height={60} />
+            <Image src="/logo.png" alt="Logo" width={45} height={45} />
           </Link>
         </div>
         <a href="#" className="navbar-logo">
