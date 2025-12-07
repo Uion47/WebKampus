@@ -93,55 +93,6 @@ body {
   align-items: center;
 }
 
-/* Dekstop to Tablet */
-
-@media (max-width: 1300px) {
-  .navbar .navbar-extra a#hamburger-menu {
-    display: inline-block;
-  }
-  .navbar .navbar-nav {
-    position: absolute;
-    top: 100%;
-    right: -100%;
-    padding: 0 5%;
-    background-color: #ffffffa3;
-    width: 25rem;
-    transition: right 0.35s ease;
-    box-shadow: -8px 0 24px rgba(2, 6, 23, 0.4);
-  }
-  .navbar .navbar-nav.active {
-    right: 0;
-  }
-
-  .navbar .navbar-logo-cokro {
-    display: none;
-  }
-
-  .navbar .navbar-nav a {
-    display: block;
-    padding: 1rem 2rem;
-    color: #000;
-  }
-
-  .navbar .navbar-nav a:hover:after {
-    background-color: var(--primary);
-    transform-origin: 0 0;
-    transform: scale(0.2);
-    color: #fff;
-  }
-}
-
-/* Responsive header offset: increase offset for small screens if navbar stacks */
-@media (max-width: 600px) {
-  :root {
-    --header-offset: 88px;
-  }
-}
-
-#hamburger-menu {
-  display: none;
-}
-
 /* Hero section styles */
 .hero {
   height: 100vh;
